@@ -1,0 +1,342 @@
+body {
+    overflow-x: hidden;
+}
+.showcase {
+    height: 100vh;
+    background-image: url('../images/Homepage_img.png');
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(91, 14, 34, 0.5);
+    z-index: 0;
+}
+
+.showcase__inner {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.links a {
+    color: white;
+}
+
+.links a:hover {
+    color: #FFA800;
+    text-decoration: none;
+}
+
+.links .active {
+    border-bottom: 1px solid white;
+}
+
+.links .active:hover {
+    border-bottom: 1px solid #FFA800;
+}
+
+.social {
+    list-style-type: none;
+}
+
+
+/* Carousel base class */
+
+.carousel {
+}
+
+
+/* Since positioning the image, we need to help out the caption */
+
+.carousel-caption {
+    bottom: 10rem;
+    z-index: 10;
+}
+
+
+/* Declare heights because of positioning of img element */
+
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+
+/*
+ */
+
+.above-tagline {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.025em;
+    color: #FFA800;
+}
+
+.below-tagline {
+    font-family: Berkshire Swash;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    align-items: center;
+    letter-spacing: 0.025em;
+    color: #FFFFFF;
+}
+
+.below-tagline::after {
+    position: absolute;
+    top: 21vh;
+    left: 24vw;
+    content: '';
+    width: 90px;
+    height: 1px;
+    background: #FFFFFF;
+}
+
+.below-tagline::before {
+    position: absolute;
+    top: 21vh;
+    right: 24vw;
+    content: '';
+    width: 90px;
+    height: 1px;
+    background: #FFFFFF;
+}
+
+
+/* footer styling */
+
+footer {
+    background: rgba(91, 14, 34, 0.85);
+    color: white;
+    padding: 7vh 7vw;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Merriweather Sans, serif;
+}
+
+footer p {
+    font-size: 18px;
+    font-family: Merriweather Sans, serif;
+    font-style: normal;
+}
+
+footer ul li {
+    list-style-type: none;
+    font-size: 18px;
+    font-family: Merriweather Sans, serif;
+    font-style: normal;
+}
+
+footer .social-links {
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+footer .social-links img {
+    padding-left: 1.5vw;
+}
+
+footer .social-links img:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+footer .footer__links {
+    line-height: 34px;
+}
+
+/*Tablet*/
+@media screen and (max-width: 992px) {
+    footer {
+        padding: 4vh 2vw;
+    }
+
+
+}
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    footer {
+        padding: 4vh 2vw;
+    }
+
+}
+
+/* end of footer styling */
+
+.scrolltop {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+}
+
+.scroll {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.scroll:hover {
+    background: #b2b2b2;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+
+/* Mobile nav */
+.hamburger {
+    padding: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.ham {
+    background-color: #fff;
+    width: 30px;
+    height: 1px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+.visible-menu {
+    z-index: 6;
+}
+
+.ham-tilt-left {
+    transform: rotate(45deg) translateX(-4px) translateY(-1px);
+    width: 30px !important;
+}
+
+.ham-no-show {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.ham-tilt-right {
+    transform: rotate(-45deg) translateX(-7px) translateY(5px);
+}
+
+.Mobile-menu {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    background-color: rgba(91, 14, 34, 0.85);
+    bottom: 100%;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.nav-out {
+    transform: translateY(100%);
+}
+
+.menus li {
+    list-style-type: none;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.menus a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+/* moving the carousel to the back */
+.carousel-inner1 {
+    z-index: -1;
+}
+
+@media only screen and (max-width: 770px) {
+    .row {
+        justify-content: center;
+    }
+
+    .text-right {
+        text-align: center !important;
+    }
+
+    .logo-footer {
+        text-align: center;
+    }
+}
+
+/* end of footer styling *//* Media query for nav */
+@media only screen and (max-width: 1175px) {
+    .links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Nav adjustments */
+@media only screen and (max-width: 600px) {
+    .logo {
+        height: 50px
+    }
+
+    .flex-row2 {
+        flex-direction: column !important;
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .flex-row3 {
+        width: 300px;
+    }
+
+    .px-5 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
